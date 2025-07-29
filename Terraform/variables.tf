@@ -23,6 +23,22 @@ variable "storage_account_name" {
   default     = "cloudkartstorage001"
 }
 
+variable "client_id" {
+  description = "Azure Service Principal Client ID"
+  type        = string
+}
+
+variable "client_secret" {
+  description = "Azure Service Principal Client Secret"
+  type        = string
+  sensitive   = true
+}
+
+variable "tenant_id" {
+  description = "Azure Tenant ID"
+  type        = string
+}
+
 variable "tags" {
   description = "Tags applied to resources"
   type = map(string)
