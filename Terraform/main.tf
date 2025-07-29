@@ -55,8 +55,3 @@ resource "azurerm_app_service" "app" {
 
   tags = var.tags
 }
-
-output "webapp_url" {
-  description = "URL of the deployed web app"
-  value       = azurerm_app_service.app.default_site_hostname
-}
